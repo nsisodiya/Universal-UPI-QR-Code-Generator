@@ -1,11 +1,13 @@
 body {
   padding: 5%;
+  padding-left: 10%;
+  padding-right: 10%;
+
 }
 
-.frontImage {
-  width: 100%;
-}
-
-.GenerateInfoBOX {
-  
+.A4Page {
+  display: block;
+  border: 1px solid blue;
+  width: 210mm;
+  height: 297mm;
 }

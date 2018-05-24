@@ -3,3 +3,7 @@
 .GenerateInfoBOX {
     display: none;
 }
+
+body {
+  padding: 0px;
+}

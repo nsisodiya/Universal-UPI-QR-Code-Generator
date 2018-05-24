@@ -66,33 +66,27 @@
             </div>
           </div>
         </div>
-        <h1>Step 1 - Fill Your Bank Details</h1>
-        <div class="card container-fluid" style="">
+        <h2>Step 1 - Fill up the Bank Details & click Generate button</h1>
+        <div class="card container-fluid" style="max-width: 400px;">
           <div class="card-body">
             <h5 class="card-title">Bank Account Info</h5>
-            <div class="input-group mb-3">
-              <div class="input-group-prepend">
-                <span class="input-group-text" id="basic-addon1">Account Name</span>
-              </div>
-              <input id="accName" type="text" class="form-control" placeholder="" aria-label="Name" aria-describedby="basic-addon1">
+
+            <div class="form-group mb-3">
+              <label for="accName">Account Name</label>
+              <input type="text" class="smallinput form-control" id="accName" placeholder="">
             </div>
-            <div class="input-group mb-3">
-              <div class="input-group-prepend">
-                <span class="input-group-text" id="basic-addon2">Account Number</span>
-              </div>
-              <input id="accNumber" type="text" class="form-control" placeholder="" aria-label="Name" aria-describedby="basic-addon1">
+            <div class="form-group mb-3">
+              <label for="accNumber">Account Number</label>
+              <input type="text" class="smallinput form-control" id="accNumber" placeholder="">
             </div>
-            <div class="input-group mb-3">
-              <div class="input-group-prepend">
-                <span class="input-group-text" id="basic-addon3">IFSC Code</span>
-              </div>
-              <input id="accIFSC" type="text" class="form-control" placeholder="" aria-label="Name" aria-describedby="basic-addon1">
+            <div class="form-group mb-3">
+              <label for="accIFSC">IFSC Code</label>
+              <input type="text" class="smallinput form-control" id="accIFSC" placeholder="">
             </div>
+            <button type="button" id="generateButton" class="btn btn-block btn-primary btn-lg">Generate QR Code</button>
           </div>
         </div>
-        <h1>Step 2 - Click on Generate button</h1>
-        <button type="button" id="generateButton" class="btn btn-primary btn-lg">Generate</button>
-        <h1>Step 3 - Click on Download QR to download the QR image</h1>
+        <h2>Step 2 - Click on "Download QR Image"</h1>
       </div>
       <div id="A4Page" class="A4Page">
           <img class="upiLogo" src="./upi-icon-black.png" alt="">

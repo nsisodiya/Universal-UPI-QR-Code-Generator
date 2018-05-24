@@ -8,6 +8,10 @@ body {
   text-align: center;
 }
 
+.smallinput {
+  max-width: 270px;
+}
+
 .mainContent {
   padding: 5%;
   padding-left: 10%;

@@ -10,62 +10,69 @@
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script src="./qrcode.js" charset="utf-8"></script>
     <title>Universal UPI QR Code Generator</title>
     <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" media="print"  href="./print.css">
   </head>
   <body>
 
-  <div class="jumbotron">
-    <h1 class="display-4">Universal UPI QR Code Generator</h1>
-    <p class="lead">Free QR Code for <b>Current Account</b> & <b>Saving Account</b></p>
-  </div>
 
-  <div class="card-deck">
-    <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
-      <div class="card-body">
-        <h5 class="card-title">Business</h5>
-        <p class="card-text">Create Free QR for Current Account</p>
-        <p class="card-text"><small class="text-muted">No app needed</small></p>
+    <div class="GenerateInfoBOX">
+      <div class="jumbotron">
+        <h1 class="display-4">Universal UPI QR Code Generator</h1>
+        <p class="lead">Free QR Code for <b>Current Account</b> & <b>Saving Account</b></p>
       </div>
-    </div>
-    <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
-      <div class="card-body">
-        <h5 class="card-title">How?</h5>
-        <p class="card-text">All you need Account Number and IFSC Code to get the QR Code.</p>
-      </div>
-    </div>
-    <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
-      <div class="card-body">
-        <h5 class="card-title">Personal</h5>
-        <p class="card-text">Create Free QR for Saving Account</p>
-        <p class="card-text"><small class="text-muted">No app needed</small></p>
-      </div>
-    </div>
-  </div>
-  <div class="card container-fluid" style="">
-    <div class="card-body">
-      <h5 class="card-title">Bank Account Info</h5>
-      <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="basic-addon1">Account Name</span>
+
+      <div class="card-deck">
+        <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">Business</h5>
+            <p class="card-text">Create Free QR for Current Account</p>
+            <p class="card-text"><small class="text-muted">No app needed</small></p>
+          </div>
         </div>
-        <input type="text" class="form-control" placeholder="" aria-label="Name" aria-describedby="basic-addon1">
-      </div>
-      <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="basic-addon2">Account Number</span>
+        <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">How?</h5>
+            <p class="card-text">All you need Account Number and IFSC Code to get the QR Code.</p>
+          </div>
         </div>
-        <input type="text" class="form-control" placeholder="" aria-label="Name" aria-describedby="basic-addon1">
-      </div>
-      <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="basic-addon3">IFSC Code</span>
+        <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">Personal</h5>
+            <p class="card-text">Create Free QR for Saving Account</p>
+            <p class="card-text"><small class="text-muted">No app needed</small></p>
+          </div>
         </div>
-        <input type="text" class="form-control" placeholder="" aria-label="Name" aria-describedby="basic-addon1">
       </div>
-      <hr class="my-4">
-      <button type="button" class="float-right btn btn-primary btn-lg">Generate</button>
+      <div class="card container-fluid" style="">
+        <div class="card-body">
+          <h5 class="card-title">Bank Account Info</h5>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">Account Name</span>
+            </div>
+            <input id="accName" type="text" class="form-control" placeholder="" aria-label="Name" aria-describedby="basic-addon1">
+          </div>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon2">Account Number</span>
+            </div>
+            <input id="accNumber" type="text" class="form-control" placeholder="" aria-label="Name" aria-describedby="basic-addon1">
+          </div>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon3">IFSC Code</span>
+            </div>
+            <input id="accIFSC" type="text" class="form-control" placeholder="" aria-label="Name" aria-describedby="basic-addon1">
+          </div>
+          <button type="button" id="generateButton" class="float-right btn btn-primary btn-lg">Generate</button>
+        </div>
+      </div>
     </div>
-  </div>
+  <div id="box1"></div>
+
+  <script src="./index.js" charset="utf-8"></script>
   </body>
 </html>

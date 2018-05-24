@@ -11,7 +11,9 @@ function genQrCode() {
   //TODO - Show Error on empty Box.
   console.log(accName, accNumber, accIFSC);
   var str = "upi://pay?pa=" + accNumber + "@" + accIFSC +".ifsc.npci&pn=" + accName + "&cu=INR";
-
+  $("#accNumberReplace").text(accNumber);
+  $("#accNameReplace").text(accName);
+  $("#accIFSCReplace").text(accIFSC);
   $("#box1").html("");
   var qrcode = new QRCode("box1", {
     text: str,

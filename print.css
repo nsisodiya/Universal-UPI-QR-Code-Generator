@@ -1,9 +1,9 @@
 
 
-.GenerateInfoBOX {
-    display: none;
-}
-
 body {
   padding: 0px;
+}
+
+.FBBOX, .shouldBeHiddenOnPrint {
+    display: none !important;
 }

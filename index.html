@@ -29,81 +29,94 @@
     }(document, 'script', 'facebook-jssdk'));</script>
 
 
-    <div class="GenerateInfoBOX">
-      <div class="jumbotron">
-        <h1 class="display-4">Universal UPI QR Code Generator</h1>
-        <p class="lead">Free QR Code for <b>Current Account</b> & <b>Saving Account</b></p>
-      </div>
-
-
-      <h2>Features</h2>
-      <ul class="list-group">
-        <li class="list-group-item list-group-item-primary">This software is Free of cost</li>
-        <li class="list-group-item list-group-item-success">No VPA needed for QR generation</li>
-        <li class="list-group-item list-group-item-primary">No UPI registration needed QR generation</li>
-        <li class="list-group-item list-group-item-success">No UPI app needed QR generation</li>
-        <li class="list-group-item list-group-item-primary">0% MDR, 0% transaction fees</li>
-        <li class="list-group-item list-group-item-success">Work both on Current Account and Savings Accounts</li>
-      </ul>
-      <div class="">
-<hr>
-      </div>
-
-      <div class="card-deck">
-        <div class="bg-light card mb-3">
-          <div class="card-body">
-            <h5 class="card-title">Business</h5>
-            <p class="card-text">Create Free QR for <b>Current Account</b></p>
-          </div>
-        </div>
-        <div class="bg-light card mb-3">
-          <div class="card-body">
-            <h5 class="card-title">Personal</h5>
-            <p class="card-text">Create Free QR for <b>Saving Account</b></p>
-          </div>
-        </div>
-        <div class="bg-light card mb-3">
-          <div class="card-body">
-            <h5 class="card-title">How?</h5>
-            <p class="card-text">All you need Account Number and IFSC Code to get the QR Code.</p>
-          </div>
-        </div>
-      </div>
-      <div class="card container-fluid" style="">
-        <div class="card-body">
-          <h5 class="card-title">Bank Account Info</h5>
-          <div class="input-group mb-3">
-            <div class="input-group-prepend">
-              <span class="input-group-text" id="basic-addon1">Account Name</span>
+    <div class="topBar shouldBeHiddenOnPrint">
+      <h1 class="display-4">Universal UPI QR Code Generator</h1>
+      <p class="lead">Free QR Code for <b>Current Account</b> & <b>Saving Account</b></p>
+    </div>
+    <div class="mainContent">
+      <div class="shouldBeHiddenOnPrint">
+        <h2>Features</h2>
+        <ul class="list-group">
+          <li class="list-group-item">0% MDR, 0% transaction fees</li>
+          <li class="list-group-item">VPA is NOT needed for for QR generation</li>
+          <li class="list-group-item">UPI registration is NOT needed for QR generation</li>
+          <li class="list-group-item">UPI app is NOT needed for QR generation</li>
+          <li class="list-group-item">Work both on Current Account and Savings Accounts</li>
+        </ul>
+        <div class="card-deck">
+          <div class="bg-light card mb-3">
+            <div class="card-body">
+              <h5 class="card-title">Business</h5>
+              <hr>
+              <p class="card-text">Create Free QR for <b>Current Account</b></p>
             </div>
-            <input id="accName" type="text" class="form-control" placeholder="" aria-label="Name" aria-describedby="basic-addon1">
           </div>
-          <div class="input-group mb-3">
-            <div class="input-group-prepend">
-              <span class="input-group-text" id="basic-addon2">Account Number</span>
+          <div class="bg-light card mb-3">
+            <div class="card-body">
+              <h5 class="card-title">Personal</h5>
+              <hr>
+              <p class="card-text">Create Free QR for <b>Saving Account</b></p>
             </div>
-            <input id="accNumber" type="text" class="form-control" placeholder="" aria-label="Name" aria-describedby="basic-addon1">
           </div>
-          <div class="input-group mb-3">
-            <div class="input-group-prepend">
-              <span class="input-group-text" id="basic-addon3">IFSC Code</span>
+          <div class="bg-light card mb-3">
+            <div class="card-body">
+              <h5 class="card-title">How?</h5>
+              <hr>
+              <p class="card-text">All you need Account Number and IFSC Code to get the QR Code.</p>
             </div>
-            <input id="accIFSC" type="text" class="form-control" placeholder="" aria-label="Name" aria-describedby="basic-addon1">
           </div>
-          <button type="button" id="generateButton" class="float-right btn btn-primary btn-lg">Generate</button>
-
         </div>
+        <h1>Step 1 - Fill Your Bank Details</h1>
+        <div class="card container-fluid" style="">
+          <div class="card-body">
+            <h5 class="card-title">Bank Account Info</h5>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Account Name</span>
+              </div>
+              <input id="accName" type="text" class="form-control" placeholder="" aria-label="Name" aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon2">Account Number</span>
+              </div>
+              <input id="accNumber" type="text" class="form-control" placeholder="" aria-label="Name" aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon3">IFSC Code</span>
+              </div>
+              <input id="accIFSC" type="text" class="form-control" placeholder="" aria-label="Name" aria-describedby="basic-addon1">
+            </div>
+          </div>
+        </div>
+        <h1>Step 2 - Click on Generate button</h1>
+        <button type="button" id="generateButton" class="btn btn-primary btn-lg">Generate</button>
+        <h1>Step 3 - Click on Download QR to download the QR image</h1>
       </div>
+      <div id="A4Page" class="A4Page">
+          <img class="upiLogo" src="./upi-icon-black.png" alt="">
+          <div style="font-size: 7mm;font-weight: normal;">BHIM UPI Payments Accepted at</div>
+          <div id="accNameReplace" style="font-size: 6mm;font-weight: bold;color: #54566f;font-family: sans-serif;">SAMPLE ACC NAME</div>
+          <div class="qrBoxOuter">
+            <div id="box1"></div>
+          </div>
+          <div id="accInfo" style="font-size: 5mm;font-weight: bold;color: #54566f;font-family: sans-serif;">
+            Account Number : <span id="accNumberReplace">SAMPLE ACC NUMBER</span>, IFSC Code: <span id="accIFSCReplace">SAMPLE IFSC CODE XYZ</span>
+          </div>
+          <div style="font-size: 7mm;font-weight: normal;padding: 2mm;">Scan and Pay using any UPI supported Apps</div>
+          <div class="hrline"></div>
+          <img style="width:85%;margin-top: 4mm;" src="./apps.png" alt="">
+          <div style="font-size: 5mm;font-weight: normal;background: azure;padding: 2mm;border: 1px solid gray;">Generated By : https://nsisodiya.github.io/Universal-UPI-QR-Code-Generator</div>
+      </div>
+      <button type="button" id="DownloadQrImage" class="shouldBeHiddenOnPrint btn btn-primary btn-lg">Download QR Image</button>
     </div>
 
-    <button type="button" id="DownloadQrImage" class="btn btn-primary btn-lg">Download QR Image</button>
-    <div id="A4Page" class="A4Page">
-        <div id="box1"></div>
-        <img style="width:90%" src="./apps.png" alt="">
-    </div>
-    <div class="fb-share-button" data-href="https://nsisodiya.github.io/Universal-UPI-QR-Code-Generator/" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fnsisodiya.github.io%2FUniversal-UPI-QR-Code-Generator&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
-    <div class="fb-comments" data-href="https://nsisodiya.github.io/Universal-UPI-QR-Code-Generator/" data-numposts="5"></div>
-
+    <!--
+    <div class="FBBOX">
+      <div class="fb-share-button" data-href="https://nsisodiya.github.io/Universal-UPI-QR-Code-Generator/" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fnsisodiya.github.io%2FUniversal-UPI-QR-Code-Generator&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+      <div class="fb-comments" data-href="https://nsisodiya.github.io/Universal-UPI-QR-Code-Generator/" data-numposts="5"></div>
+    </div>-->
   <script src="./index.js" charset="utf-8"></script>
   </body>
 </html>

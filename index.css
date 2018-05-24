@@ -1,15 +1,29 @@
 body {
+
+}
+.topBar {
+  background: #352b2b;
+  color: #d6d5a3;
+  padding: 20px;
+  text-align: center;
+}
+
+.mainContent {
   padding: 5%;
   padding-left: 10%;
   padding-right: 10%;
-
 }
 
 .A4Page {
-  display: block;
+  display: flex;
+  padding: 4mm;
   border: 1px solid blue;
   width: 210mm;
+  background-color: white;
   height: 297mm;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 
@@ -25,4 +39,29 @@ li:before {
     margin-top: 7px;
     margin-left: -3px;
     margin-right: 11px;
+}
+
+.qrBoxOuter {
+  padding: 4mm;
+  background: white;
+  border: 1px solid black;
+  margin-top: 2mm;
+  margin-bottom: 2mm;
+}
+
+#box1 {
+  width: 76mm;
+  height: 76mm;
+}
+.upiLogo {
+  width: 56%;
+}
+#box1 img{
+  width: 100%;
+}
+
+.hrline{
+  width: 90%;
+  background-color: #433b52;
+  height: 1mm;
 }

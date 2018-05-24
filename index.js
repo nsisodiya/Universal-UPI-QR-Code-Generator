@@ -2,6 +2,7 @@ $("#generateButton").click(function () {
   genQrCode()
 });
 
+//var l = {}; location.search.slice(1).split("&").map(function(v){var x = v.split("="); l[x[0]] = x[1]; });
 function genQrCode() {
   var accName = $("#accName").val();
   var accNumber = $("#accNumber").val();
@@ -11,6 +12,7 @@ function genQrCode() {
   console.log(accName, accNumber, accIFSC);
   var str = "upi://pay?pa=" + accNumber + "@" + accIFSC +".ifsc.npci&pn=" + accName + "&cu=INR";
 
+  $("#box1").html("");
   var qrcode = new QRCode("box1", {
     text: str,
     width: 256,
@@ -30,10 +32,10 @@ function DownloadQrImage() {
       letterRendering: 1,
       allowTaint : true,
   		onrendered: function (canvas) {
-        document.body.appendChild(canvas)
-  			// canvas.toBlob(function (blob) {
-  			// 	saveAs(blob, "UPI_QR_Code.png");
-  			// });
+        //document.body.appendChild(canvas)
+  			canvas.toBlob(function (blob) {
+  				saveAs(blob, "UPI_QR_Code.png");
+  			});
   		}
   });
 }

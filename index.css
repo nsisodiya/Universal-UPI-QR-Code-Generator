@@ -11,3 +11,18 @@ body {
   width: 210mm;
   height: 297mm;
 }
+
+
+li {
+    display: block;
+}
+
+li:before {
+    content: "🌑";
+    font-family: 'Glyphicons Halflings';
+    font-size: 9px;
+    float: left;
+    margin-top: 7px;
+    margin-left: -3px;
+    margin-right: 11px;
+}

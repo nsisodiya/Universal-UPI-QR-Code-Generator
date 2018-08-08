@@ -1,2 +1,1 @@
-# Universal-UPI-QR-Code-Generator
-Universal UPI QR Code Generator
+# Click - https://nsisodiya.github.io/Universal-UPI-QR-Code-Generator/
